@@ -1,0 +1,24 @@
+<div  [formGroup]="fbFormGroup">
+    
+    <div>
+        <input type="text" placeholder="Enter your username" formControlName="username" class="form-control-lg">
+    </div>
+
+    <div>
+        <input type="password" placeholder="Enter Password" formControlName="password" class="form-control-lg">
+    </div>
+
+    <div>
+        <input type="text" placeholder="Enter Email" formControlName="email" class="form-control-lg">
+    </div>
+
+    <div>
+        <input type="text" placeholder="Enter Mobile" formControlName="mobile" class="form-control-lg">
+    </div>
+
+    <div>
+        <button class="btn btn-danger" [disabled]="!fbFormGroup.valid" (click)="registerHere()">Register</button>
+    </div>
+
+    <a routerLink="/login">Login Here>>>></a>
+</div>  

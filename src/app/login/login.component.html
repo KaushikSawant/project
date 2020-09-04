@@ -1,0 +1,17 @@
+<div  [formGroup]="fbFormGroup">
+    
+    <div class="alert alert-danger" role='alert' *ngIf="uiInvalidCredentials">Invalid Credentials</div>
+    <div>
+        <input type="text" placeholder="Enter your username" formControlName="username" class="form-control-lg">
+    </div>
+
+    <div>
+        <input type="text" placeholder="Enter Password" formControlName="password" class="form-control-lg">
+    </div>
+
+    <div>
+        <button class="btn btn-danger" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">Submit</button>
+    </div>
+    
+    <a routerLink="/register">Register Here</a>
+</div>    
